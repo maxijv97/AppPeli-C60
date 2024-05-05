@@ -20,21 +20,7 @@
 
     /*  */
 }   
-
-
-/* Header:
-Para el <header>, configuro que sea un contenedor flexible, distribuyendo espacio entre sus elementos y alineándolos verticalmente al centro. También aplico un relleno en los lados, y defino su altura y ancho en relación al tamaño del viewport. Además, evito que haya un desbordamiento vertical visible.
-
-Para el título principal <h1> dentro del <header>, selecciono una fuente específica y un tamaño de fuente más grande.
-
-Los botones con la clase .button-sus obtienen estilos de fuente y se les da una apariencia de botón.
-
-Los elementos con la clase .logo se hacen clicables, mostrando un cursor de puntero al pasar el ratón por encima.
-
-Las listas con la clase .nav-links se presentan de forma horizontal y los elementos de lista <li> se alinean en línea con un espacio específico entre ellos.
-
-*/
-header{
+header {
     display: flex;
     justify-content: space-between;  
     align-items: center;
@@ -62,6 +48,8 @@ header h1 {
 
 .logo{
     cursor: pointer;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
 }
 
 .nav-links{
@@ -77,34 +65,19 @@ header h1 {
     padding: 5px 20px;
     background-color: #842DD0;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.button-sus:hover{
+    background-color: #9936f0;
+}
+
+.cancelacion-flexible{
+    color:#842DD0;
+}
 
 /*------------------------Home ------------------------------*/
-
-/* En este bloque de código CSS, defino los estilos para la sección "home" de la página:
-
-".home": Establezco que esta sección debe ser un contenedor flexible con un ancho y alto del 100% del viewport. Además, aplico un fondo compuesto por una combinación de un degradado lineal y una imagen de fondo.
-
-".Welcome-div": Configuro el ancho al 50% y el alto al 100% para la mitad izquierda de la sección.
-
-".titulo-descatado": Establezco la fuente, peso y tamaño de fuente, junto con el margen superior e izquierdo y el color del texto.
-
-".texto-promocional": Defino la fuente, el peso de fuente y el color del texto, así como el margen superior e izquierdo.
-
-".cancelacion-flexible": Establezco la fuente, peso y tamaño de fuente para resaltar el texto de cancelación flexible.
-
-".Savings": Configuro el ancho al 50% y el alto al 100% para la mitad derecha de la sección.
-
-".destacar-ahorro": Defino la fuente, peso, tamaño de fuente, margen superior e izquierdo, y color para destacar el ahorro.
-
-".destacar-ahorro2": Establezco la fuente, peso de fuente, tamaño de fuente, color y márgenes para resaltar aún más el ahorro.
-
-".Savings p": Configuro la fuente, margen superior e izquierdo, peso de fuente y color para el texto de ahorro. 
-
-*/
-
 .home{
     display: flex;
     width: 100vw;
@@ -132,7 +105,8 @@ header h1 {
     font-weight: 400;
     color: #d1d4d4;
     margin-top: 2rem;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
+    width: 70%;
 }
 
 .cancelacion-flexible{
@@ -215,9 +189,9 @@ header h1 {
     display: flex;
     flex-direction: column; /* Alinea verticalmente los elementos */
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-image: url(/Assets/background-plans.png);
+    background-image: url(/Assets/background-plans1.png);
     background-size: cover;
     overflow: hidden;
 }
@@ -242,11 +216,15 @@ header h1 {
    width: 200px;
    height: 250px;
    margin: 100px;
-   border: 2px solid #030328;
+   border: 2px solid #F600FF;
    border-radius: 5px;
-   box-shadow: 5px 5px 20px #F600FF;
+   
    overflow: hidden;
    
+}
+/*box-shadow:5px 5px 20px #030328; */
+.card:hover{
+    box-shadow: 5px 5px 20px #F600FF;
 }
 
 .card-p{
@@ -270,10 +248,17 @@ header h1 {
 .card button {
     width: 120px;
     height: 40px;
-    margin: 20px;
+    margin-top: 20px;
     margin-left: 2.6rem;
     background-color: #842DD0;
-    box-shadow: 5px 5px 20px black;
+    border:none;
+    color:#edf0f1;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+.card button:hover{
+    background-color: #F600FF;
 }
 
 
@@ -320,6 +305,7 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    
 }
 
 
@@ -330,6 +316,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     grid-gap: 10px; 
+    margin:20px
 }
 .footer-column {
     text-align: left;
@@ -376,11 +363,12 @@ footer {
         width: 100vw;
         height: 50vh;
     }
+
     
     .titulo-descatado{
         font-size: 1.5rem;
         padding-left:2.5rem ;
-        margin-top: 10rem;
+        margin-top: 150rem;
     }
     .texto-promocional{
         margin-top: 2rem;
